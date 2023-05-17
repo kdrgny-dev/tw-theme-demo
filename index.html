@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      href="https://scriptmint.com/images/favicons/favicon.ico"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind Theme CSS</title>
+    <link href="dist/app.css" rel="stylesheet" />
+  </head>
+  <body class="theme-first">
+    <div class="h-screen w-full bg-primary">
+      <header class="text-gray-600 body-font">
+        <div
+          class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"
+        >
+          <a
+            class="title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
+          >
+            <span class="ml-3 text-xl text-logo">UNX.io</span>
+          </a>
+          <nav
+            class="md:ml-auto flex flex-wrap items-center text-base justify-center"
+          >
+            <a class="mr-5 text-menu">First Link</a>
+            <a class="mr-5 text-menu">Second Link</a>
+            <a class="mr-5 text-menu">Third Link</a>
+            <a class="mr-5 text-menu">Fourth Link</a>
+          </nav>
+          <button
+            class="inline-flex items-center bg-buttonColor border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"
+          >
+            Button
+            <svg
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              class="w-4 h-4 ml-1"
+              viewBox="0 0 24 24"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </button>
+        </div>
+      </header>
+      <div class="space-y-4 container">
+        <h1 class="text-secondary text-center">Hello World!</h1>
+        <div class="flex items-center gap-10">
+          <button
+            class="flex items-center justify-center px-4 py-2 text-white border border-white rounded bg-buttonColor"
+            id="theme1"
+          >
+            Theme 1
+          </button>
+          <button
+            class="flex items-center justify-center px-4 py-2 text-white border border-white rounded bg-buttonColor"
+            id="theme2"
+          >
+            Theme 2
+          </button>
+          <button
+            class="flex items-center justify-center px-4 py-2 text-white border border-white rounded bg-buttonColor"
+            id="theme3"
+          >
+            Theme 3
+          </button>
+        </div>
+      </div>
+    </div>
+    <script>
+      // change body class
+      function changeTheme(theme) {
+        document.body.className = theme;
+      }
+      // theme 1
+      document.getElementById("theme1").addEventListener("click", function () {
+        changeTheme("theme-first");
+      });
+      // theme 2
+      document.getElementById("theme2").addEventListener("click", function () {
+        changeTheme("theme-second");
+      });
+      // theme 3
+      document.getElementById("theme3").addEventListener("click", function () {
+        changeTheme("theme-third");
+      });
+    </script>
+  </body>
+</html>
